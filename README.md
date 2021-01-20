@@ -7,11 +7,12 @@ Kong Gateway is an open-source, lightweight API gateway optimized for microservi
 ## Action
 The best way to use the code is to read the comments and to copy-paste the instructions from `install_echo_apis.sh`, understanding what is going on under the hoods, this is also why I have added some extra monitoring command.
 
-If you don't have a K8S cluster available you can use the [Katacoda environment](https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster) or install [minikube](https://minikube.sigs.k8s.io/docs/start/) on your machine.
+If you don't have a K8S cluster available you can use the [Katacoda environment](https://www.katacoda.com/courses/kubernetes/kubectl-run-containers) or install [minikube](https://minikube.sigs.k8s.io/docs/start/) on your machine.
 
 1. Go on your preferred environment. Katacoda some times gets stuck, so don't rely on that terminal state.. ;)
-2. Star and fork this repo
+2. Star and fork this repo :)
 3. Clone your forked repo on the machine
+3. `cd kubernetes_kong_api_management/`
 3. Since this is a didactical repo, it has no meaning to do a blind-run script.
     So it is better to copy paste a command at a time.
 
