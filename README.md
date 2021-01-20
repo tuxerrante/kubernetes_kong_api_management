@@ -18,6 +18,7 @@ If you don't have a K8S cluster available you can use the [Katacoda environment]
 
 
 ## Sources
+- [The echo server app](gcr.io/kubernetes-e2e-test-images/echoserver:2.2)
 - https://docs.konghq.com/kubernetes-ingress-controller/1.1.x/introduction/
 - https://github.com/Kong/kubernetes-ingress-controller
 

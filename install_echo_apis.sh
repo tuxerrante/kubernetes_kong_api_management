@@ -26,6 +26,8 @@ kubectl apply -f ./src/echo_service_deployment.yml
 ##### Create an ingress rule for the 1.0 API version
 kubectl apply -f ./src/echo_ingress_v1.yml
 
+#### TEST
+curl --insecure -i --stderr - http://${PROXY_IP}/api/1.0
 
 ######################################################
 ###### APPLY A FAKE V2 VERSION OF THE SAME APP "ECHO"
@@ -37,10 +39,10 @@ kubectl apply -f src/echo_ingress_aggregate.yml
 
 ######################################################
 #### TEST
-curl --insecure -i --stderr - http://${PROXY_IP}/api/1.0 |grep pod
+curl --insecure --stderr - http://${PROXY_IP}/api/1.0 |grep pod
 
 
-curl --insecure -i --stderr - http://${PROXY_IP}/api/2.0 |grep pod
+curl --insecure --stderr - http://${PROXY_IP}/api/2.0 |grep pod
 #        pod name:       echo-v2-9b78d55f7-b4rcz
 #        pod namespace:  default
 #        pod IP: 172.18.0.6
@@ -53,13 +55,10 @@ curl --insecure -i --stderr - http://${PROXY_IP}/api/2.0 |grep pod
 
 kubectl patch ingress demo -p '{"metadata":{"annotations":{"konghq.com/strip-path":"true"}}}'
 
-
+####
+#   Look at the real path received by the app
 curl --insecure --stderr - http://${PROXY_IP}/api/2.0/login |grep "Request Information" -A3
-#Request Information:
-#        client_address=172.18.0.4
-#        method=GET
-#        real path=/
-        
-
-
-
+# Request Information:
+#         client_address=172.18.0.4
+#         method=GET
+#         real path=/login
