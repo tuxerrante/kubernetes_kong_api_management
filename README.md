@@ -1,9 +1,3 @@
-<iframe src="https://ghbtns.com/github-btn.html?user=tuxerrante&repo=kubernetes_kong_api_management&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe> 
-<iframe src="https://ghbtns.com/github-btn.html?user=tuxerrante&repo=kubernetes_kong_api_management&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-
-
-
-
 # README
 This should be a fast start to understand and use an api gateway on kubernetes leveraging the Kong ingress.
 
